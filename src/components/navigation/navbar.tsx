@@ -18,22 +18,30 @@ import { auth } from "@/app/(auth)/firebase/config";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 import { signOut } from "firebase/auth";
+import Image from "next/image";
 
 export default function Navbar() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const [user] = useAuthState(auth);
   const router = useRouter();
   console.log(user);
-  
-const userSession = sessionStorage.getItem('user')
+
+  const userSession = sessionStorage.getItem("user");
   // if (!user && !userSession) {
   //   router.push("/sign-up");
   // }
   return (
     <nav className="container mx-auto py-[18px] flex justify-between items-center">
-      <div>
-        <Link href="">BASIS</Link>
-      </div>
+      <Link href="/" className="flex items-center gap-2">
+        <Image
+          src="/images/aeroview_logo.svg"
+          alt="aero view logo"
+          width={50}
+          height={50}
+          className=""
+        />
+        <h1>BASIS</h1>
+      </Link>
       {isDesktop ? (
         <div className="flex justify-between items-center gap-[10rem]">
           <ul className="flex justify-between items-center gap-8">
@@ -80,12 +88,15 @@ const userSession = sessionStorage.getItem('user')
               </Link>
             </div>
           ) : (
-            <button 
-            className="bg-[#3661eb] text-white py-4 px-8 rounded-xl"
-            onClick={()=> {signOut(auth)
-              sessionStorage.removeItem('user')
-            }}
-            >Logout</button>
+            <button
+              className="bg-[#3661eb] text-white py-4 px-8 rounded-xl"
+              onClick={() => {
+                signOut(auth);
+                sessionStorage.removeItem("user");
+              }}
+            >
+              Logout
+            </button>
           )}
         </div>
       ) : (
