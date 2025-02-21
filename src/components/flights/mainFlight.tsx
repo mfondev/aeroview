@@ -4,6 +4,9 @@ import AvailableFlights from "./availableFlights";
 import SearchFlights from "./searchFlights";
 import Contact from "./contact";
 import FlightsLink from "./flightsLink";
+import { FaPlane } from "react-icons/fa";
+import Image from "next/image";
+
 
 
 export default function FlightPage() {
@@ -12,11 +15,20 @@ export default function FlightPage() {
       <FlightHeader />
       <AvailableFlights />
       <div className="bg-[#3661eb] w-full">
-        <div className=" max-w-[60%]  pl-16 py-20 text-white text-left">
+        <div className=" max-w-[70%] pl-16 py-20 text-white text-left">
           <h3 className="text-[48px]">
-            Airlines save a number of <br /> <span>$7,084</span> discounted seats for
-            every flight <span></span> called "consolidator" fares. <br />
-            Now they're yours. <span></span>
+            Airlines save a number of <br /> <span className="bg-[#95adfc] shadow-sm text-[20px] rounded-full py-2 px-4">$7,084</span> discounted seats for
+            every <br /> flight   {/*<div><FaPlane className="text-white" /> </div>*/}called "consolidator" fares. <br /> 
+             Now they're yours. {/*<div className="flex items-center ">
+                    <Image
+                      src="/images/aeroview_logo.svg"
+                      alt="aero view logo"
+                      width={20}
+                      height={20}
+                      className=""
+                    />
+                    <h1>Aeroview</h1>
+                  </div> */}
           </h3>
           
           <p className="text-[16px] py-4">
@@ -29,18 +41,19 @@ export default function FlightPage() {
         <section className="">
           <article className="container mx-auto py-16">
             <div>
-              <h3 className="text-center text-[32px] max-w-[430px] mx-auto">
+              <h3 className="text-center text-3xl max-w-[430px] mx-auto">
                 <span className="text-[#4360ba] text-[24px] font-bold">So easy</span>,
                 Grandma could do it{" "}
                 <span className="text-[#4360ba] text-[24px] font-bold">
-                  Save thousands. In 3 easy steps
-                </span>
+                  Save thousands.
+                </span> 
+                In 3 easy steps
               </h3>
               <p className="text-[#a6abb8] text-center">
                 Discounted, "insider" fares. At your fingertips.
               </p>
             </div>
-            <main className="py-8 flex flex-row items-center justify-center  gap-6">
+            <main className="py-8 flex flex-row  justify-center  gap-2">
               <SearchFlights />
               <Contact />
               <FlightsLink />

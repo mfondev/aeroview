@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Testimonial() {
   return (
     <main className="bg-[#cbd4e1] my-[200px] p-20">
-      <section className="flex items-center justify-between bg-white my-[200p] pl-6 p-4 container mx-auto  py-5 rounded-[10px]">
+      <section className="flex items-center justify-between bg-white my-[200p] pl-10 p-4 container mx-auto  py-5 rounded-[20px]">
         <div className="space-y-6 max-w-[500px]">
           <h5>What Travelers Say</h5>
           <h1 className="text-[28px]  ">
