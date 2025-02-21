@@ -6,7 +6,7 @@ export default function FlightSummary() {
   return (
     <>
       <section className="bg-[#081029] relative w-full">
-        <main className=" py-10 pb-[400px] container mx-auto">
+        <main className="py-10 pb-[400px] container mx-auto">
           <article className="flex items-center justify-between gap-">
             <section className="flex gap-4">
               <div className=" mt-8 bg- white shadow-2xl rounded-[20px] border-white">
@@ -67,7 +67,7 @@ export default function FlightSummary() {
               </div>
             </section>
             <div className="text-white max-w-[380px]">
-              <h2 className="bg-[#192452] text-[#5764a6] p-2 rounded-full w-fit">
+              <h2 className="bg-[#192452] text-[#5764a6] p-2 rounded-full w-fit capitalize">
                 Saving types
               </h2>
               <h3 className="text-[32px] ">
@@ -86,10 +86,11 @@ export default function FlightSummary() {
                 Business class benefit
               </h2>
               <h3 className="text-[32px]">You Deserve better than 88B</h3>
+              
               <p className="text-[#a6abb8]">
                 Crossing youur fingers youll be treated like a real human on
                 your next fight? Basis makes premium air travel more
-                accessible--andaffordable--than ever.
+                accessible--and affordable--than ever.
               </p>
             </div>
             <section className="flex gap-4">
@@ -112,7 +113,7 @@ export default function FlightSummary() {
             </section>
           </article>
         </main>
-        <div className="absolute bottom-[-250px] left-1/2 transform -translate-x-1/2 w-full">
+        <div className="absolute bottom-[-250px] left-1/2 transform -translate-x-1/2 w-full mb-[100px]">
           <Cta />
         </div>
       </section>

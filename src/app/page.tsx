@@ -4,6 +4,7 @@ import Faq from "@/components/faq/faq";
 import Footer from "@/components/navigation/footer";
 import FlightPage from "@/components/flights/mainFlight";
 import Testimonial from "@/components/testimonial";
+import FlightSummary from "@/components/flights/flightSummary";
 
 export default function Home() {
   
@@ -11,7 +12,7 @@ export default function Home() {
     <>
       <MainHeader />
       <FlightPage />
-      <Faq />
+      <FlightSummary />
       <Testimonial />
       <Footer />
     </>
