@@ -4,6 +4,7 @@ import Cta from "./cta";
 import { FaPlane } from "react-icons/fa";
 
 export default function FlightSummary() {
+  
   return (
     <>
       <section className="bg-[#081029] relative w-full">
