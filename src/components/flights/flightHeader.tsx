@@ -10,7 +10,7 @@ export default function FlightHeader() {
       <header className='border-1 border-[#ecedef] container mx-auto py-4'>
         <SeekFlights />
         <main className='flex items-center justify-betweens border border-[#ecedef] rounded-[5px] '>
-          <div className='border-r-[1px] border-[#ecedef] pr-20 pl-2 flex items-center gap-3 py-2
+          <div className='border-r-[1px] border-[#ecedef] pr-20 pl-2 flex items-center gap-3 p-2
           '>
             <TbPlaneDeparture className='text-black'/>
             <div>

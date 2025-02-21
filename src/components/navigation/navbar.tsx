@@ -40,7 +40,7 @@ export default function Navbar() {
           height={50}
           className=""
         />
-        <h1>BASIS</h1>
+        <h1>Aeroview</h1>
       </Link>
       {isDesktop ? (
         <div className="flex justify-between items-center gap-[10rem]">
