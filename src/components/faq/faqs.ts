@@ -12,11 +12,11 @@ export const FAQs = [
     answers: "For flying",
   },
   {
-    question: "What kind f savings can i experience?",
+    question: "What kind of savings can i experience?",
     answers: "For flying",
   },
   {
-    question: "Are 100% of your fares bokable online?",
+    question: "Are 100% of your fares bookable online?",
     answers: "For flying",
   }
 ];

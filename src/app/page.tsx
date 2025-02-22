@@ -13,6 +13,7 @@ export default function Home() {
       <MainHeader />
       <FlightPage />
       <FlightSummary />
+      <Faq />
       <Testimonial />
       <Footer />
     </>

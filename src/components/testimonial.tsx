@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Testimonial() {
   return (
-    <main className="bg-[#cbd4e1] my-[200px] p-20">
-      <section className="flex items-center justify-between bg-white my-[200p] pl-10 p-4 container mx-auto  py-5 rounded-[20px]">
+    <main className="bg-[#eff0f3] pb-[230px] mt-[100px] p-20 ">
+      <section className="flex items-center justify-between bg-white my-[200p] pl-10 p-4 container mx-auto  py-5 rounded-[20px] w-[80%]">
         <div className="space-y-6 max-w-[500px]">
           <h5>What Travelers Say</h5>
           <h1 className="text-[28px]  ">
