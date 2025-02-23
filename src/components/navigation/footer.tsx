@@ -51,13 +51,12 @@ export default function Footer() {
             <li className='text-[13px]  text-[#a3a4a5]'>Terms of Use</li>
             <li className='text-[13px]  text-[#a3a4a5]'>Privacy Policy </li>
             <li className='text-[13px]  text-[#a3a4a5]'>Refund Policy</li>
-            <li className='text-[13px]  text-[#a3a4a5]'></li>
           </ul>
         </div>
       </main>
       <div className='flex items-center justify-between container mx-auto mt-9'>
        <p>&copy; Flybasis. All right reserved</p>
-       <div>logos</div>
+       <div>logo</div>
       </div>
     </footer>
   )
