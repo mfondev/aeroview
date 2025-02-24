@@ -41,12 +41,12 @@ export default function FlightPage() {
         <section className="">
           <article className="container mx-auto py-16">
             <div>
-              <h3 className="text-center text-3xl max-w-[430px] mx-auto">
+              <h3 className="text-center text-3xl max-w-[450px] mx-auto">
                 <span className="text-[#4360ba] text-[24px] font-bold">So easy</span>,
                 Grandma could do it{" "}
                 <span className="text-[#4360ba] text-[24px] font-bold">
                   Save thousands.
-                </span> 
+              </span>{" "}
                 In 3 easy steps
               </h3>
               <p className="text-[#a6abb8] text-center">

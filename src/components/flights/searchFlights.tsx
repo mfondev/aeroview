@@ -10,14 +10,14 @@ export default function SearchFlights() {
           <RiSearchFill className="text-[#3661eb]" />
         </div>
         <h2 className="font-bold mb-4">Search Flights</h2>
-        <p className="text-[#a6abb8]">
+        <p className="text-[#a6abb8] text-[14px]">
           Enter your dates and destination while our proprietary technology
           searches 100+ consolidators to find you the best deal.
         </p>
       </div>
-      <main>
-        <h5 className="text-[10px] border border-black mx-auto rounded-full w-fit flex justify-center items-center px-4 py-1">
-          More than <span>112+</span> flights available
+      <main>                       
+        <h5 className="text-[8px] border border-[rgba(0,0,0,0.5)] mx-auto rounded-full w-fit flex justify-center items-center px-2 py-">
+          More than <span className="text-[#3661eb] font-bold">112+</span> flights available
         </h5>
         <div className="bg-white shadow-2xl rounded-[10px] w-full">
           {/* <SeekFlights /> */}

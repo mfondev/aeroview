@@ -22,7 +22,7 @@ export default function AvailableFlights() {
       </header>
       <div className=" mt-8 bg-white shadow-2xl rounded-[20px] border-white">
         <div className="relative mb-4">
-          <h4 className="text-[12px] px-3 py-1 text-[#3661eb] bg-[#fff] uppercase rounded-r-[5px] absolute top-3">
+          <h4 className="text-[9px] px-3 py-1 text-[#3661eb] bg-[#fff] uppercase rounded-r-[5px] absolute top-3 ">
             Business class
           </h4>
           <Image
