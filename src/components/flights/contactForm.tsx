@@ -70,7 +70,8 @@ export default function ContactForm() {
               <FormLabel></FormLabel>
               <FormControl>
                 <Input 
-                placeholder="name"
+                placeholder="Name"
+                className="bg-white"
                 
                 type="text"
                 {...field} />
@@ -88,8 +89,8 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel></FormLabel>
               <FormControl>
-                <Input 
-                placeholder="xxx xxx xxx"
+                <Input       
+                placeholder="+234"
                 className="bg-white"
                 type="text"
                 {...field} />
@@ -109,11 +110,12 @@ export default function ContactForm() {
               <FormControl>
                 <Input 
                 placeholder="Email"
+                className="bg-white"
                 
                 type="email"
                 {...field} />
               </FormControl>
-              <FormDescription>This is your public display name.</FormDescription>
+              {/* <FormDescription>This is your public display name.</FormDescription> */}
               <FormMessage />
             </FormItem>
           )}

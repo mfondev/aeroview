@@ -18,8 +18,8 @@ export default function Footer() {
       </div>
       <main className=' flex items-center justify-between container mx-auto bg-[#192452] p-8 rounded-[20px] '>
         <article className='space-y-2 '>
-          <h2 className='text-[28px] '>Basis</h2>
-          <p className='text-[16px]'>Skip the line.Get our top daily deal.</p>
+          <h2 className='text-[28px] '>Aeroview</h2>
+          <p className='text-[13px]'>Skip the line.Get our top daily deal.</p>
           <div className='flex items-center'>
             <input type='email' placeholder='Enter your email' className='p-2 w-[300px] rounded-[8px] text-[15px]'/>
             <button className='bg-[#3661eb] text-white py-2 px-4 rounded-[5px] ml-2'>

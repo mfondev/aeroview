@@ -11,7 +11,7 @@ export default function FlightsLink() {
           <LuLink  className="text-[#3661eb]"/>
           </div>
           <h2 className="font-bold mb-4">Receiving Book Link</h2>
-          <p className="text-[#a6abb8]">
+          <p className="text-[#a6abb8] text-[14px]">
             Add your preferred way of being contacted so we can send you the
             best option(s) straight to your phone or email{" "}
           </p>

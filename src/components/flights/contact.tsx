@@ -11,7 +11,7 @@ export default function Contact() {
             <FaUserAlt className="text-[#3661eb]" />
           </div>
           <h2 className="font-bold mb-4">Enter Contact Info</h2>
-          <p className="text-[#a6abb8]">
+          <p className="text-[#a6abb8] text-[14px] mb-6">
             Add your preferred way of being contacted so we can send you the
             best option(s) straight to your phone or email{" "}
           </p>

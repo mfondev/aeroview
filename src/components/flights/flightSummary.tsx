@@ -51,7 +51,7 @@ export default function FlightSummary() {
                 <div className="flex items-center justify-center my-6 gap-8">
                   <div>
                     <h1 className="text-[#a6abb8]">RETAE</h1>
-                    <p className="text-[#a6abb8] font-bold">£820</p>
+                    <p className="text-[#a6abb8] font-bold line-through">£820</p>
                   </div>
                   <div>
                     <p className="bg-[#3661eb] text-white  text-[14px] px-12 py-2 rounded-t-[5px]">
@@ -95,13 +95,13 @@ export default function FlightSummary() {
                 <div className="flex items-center justify-center my-6 gap-8">
                   <div>
                     <h1 className="text-[#a6abb8]">RETAE</h1>
-                    <p className="text-[#a6abb8] font-bold">£820</p>
+                    <p className="text-[#a6abb8] font-bold line-through">£820</p>
                   </div>
                   <div>
                     <p className="bg-[#3661eb] text-white  text-[14px] px-12 py-2 rounded-t-[5px]">
                       60% OFF
                     </p>
-                    <p className=" font-extrabold text-[18px] italic bg-[#eff0f3] px-4 py-2 text-center rounded-b-[5px]">
+                    <p className=" font-extrabold text-[18px] italic bg-[#eff0f3] px-4 py-2 text-center rounded-b-[5px] ">
                       $212
                     </p>
                   </div>
