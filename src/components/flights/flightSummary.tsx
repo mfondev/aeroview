@@ -4,18 +4,6 @@ import Cta from "./cta";
 import { FaPlane } from "react-icons/fa";
 
 export default function FlightSummary() {
-  // const same = (arr: number[]) => {
-  //   for (let i = 0; i < arr.length; i++) {
-  //     const element = arr[i];
-  //   console.log(element);
-
-  //   }
-
-  //   // return arr.length === arrr.length;
-  // };
-
-  // console.log(same([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-
   return (
     <>
       <section className="bg-[#081029] relative w-full">

@@ -11,17 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AvailableFlights() {
   const moveFlight = () => {
-    // gsap.fromTo(".flight-svg",{x:-45},{x:46, duration: 1})
     const tl = gsap.timeline();
     tl.from(".flight-svg", { x: -45 });
     tl.to(".flight-svg", { x: 46, duration: 1 });
   };
-
   const resetFlight = () => {
     gsap.to(".flight-svg", { x: 0, duration: 1 });
   };
-  // useEffect(() => {
-  // let hover = false
 
   //   if (hover) {
   // gsap.fromTo(".flight-svg",{x:-200},{x:46, duration: 1})
