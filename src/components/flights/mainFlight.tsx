@@ -8,31 +8,14 @@ import Contact from "./contact";
 import FlightsLink from "./flightsLink";
 import { FaPlane } from "react-icons/fa";
 import Image from "next/image";
-import { flightAnimation, imageSlide } from "../ui/animation";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { flightAnimation, modalSlide } from "../ui/animation";
 
 export default function FlightPage() {
   const container = useRef(null);
-
   useEffect(() => {
     flightAnimation();
     // header animation
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: ".main-area", start: "top center" },
-    });
-    
-    tl.to(".head-text1", { y: -35, duration: 1 });
-    tl.to(".head-text2", { y: -34, duration: 0.5 });
-    tl.fromTo('.area-section',{
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-    } , "-=1");
+    modalSlide();
   }, []);
 
   return (
@@ -104,7 +87,7 @@ export default function FlightPage() {
               </p>
             </div>
             <main className="py-8 flex flex-row  justify-center  gap-2">
-              <SearchFlights  />
+              <SearchFlights />
               <Contact />
               <FlightsLink />
             </main>
