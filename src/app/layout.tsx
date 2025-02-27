@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Provider from "./_provider";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import LenisProvider from "./_lenisProvider";
 
 export const metadata: Metadata = {
   title: "Aeroview",
@@ -42,10 +43,12 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <Provider>
-          {children}
-          {modal}
-        </Provider>
+        <LenisProvider>
+          <Provider>
+            {children}
+            {modal}
+          </Provider>
+        </LenisProvider>
       </body>
     </html>
   );
