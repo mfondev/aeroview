@@ -4,7 +4,7 @@ import { LuLink } from "react-icons/lu";
 export default function FlightsLink() {
   return (
     <>
-      <article className="p-5 w-1/4 flex flex-col gap-6 bg-white rounded-[20px]">
+      <article className="p-5 w-1/4 flex flex-col gap-6 bg-white rounded-[20px] area-section">
         <div>
         <div className="p-3 bg-[#eff4f8] rounded-[8px] mb-4 w-fit">
           
