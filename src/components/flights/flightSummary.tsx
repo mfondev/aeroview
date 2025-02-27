@@ -1,16 +1,23 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Cta from "./cta";
 import { FaPlane } from "react-icons/fa";
+import { summaryAnimation } from "../ui/animation";
 
 export default function FlightSummary() {
+  useEffect(() => {
+ summaryAnimation()
+  }, []);
+
   return (
     <>
-      <section className="bg-[#081029] relative w-full">
+      <section className="bg-[#081029] relative w-full summary-area">
         <main className="py-10 pb-[400px] container mx-auto">
           <article className="flex items-center justify-betwee gap-20">
             <section className="flex gap-4">
-              <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white">
+              <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white flight-summary">
                 <div className="relative mb-2">
                   <div className="relative w-[320px] h-[230px]">
                     <Image
@@ -39,7 +46,9 @@ export default function FlightSummary() {
                 <div className="flex items-center justify-center my-6 gap-8">
                   <div>
                     <h1 className="text-[#a6abb8]">RETAE</h1>
-                    <p className="text-[#a6abb8] font-bold line-through">£820</p>
+                    <p className="text-[#a6abb8] font-bold line-through">
+                      £820
+                    </p>
                   </div>
                   <div>
                     <p className="bg-[#3661eb] text-white  text-[14px] px-12 py-2 rounded-t-[5px]">
@@ -54,7 +63,7 @@ export default function FlightSummary() {
                   View content on this deal
                 </h5>
               </div>
-              <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white">
+              <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white flight-summary">
                 <div className="relative mb-2">
                   <div className="relative w-[320px] h-[230px]">
                     <Image
@@ -83,7 +92,9 @@ export default function FlightSummary() {
                 <div className="flex items-center justify-center my-6 gap-8">
                   <div>
                     <h1 className="text-[#a6abb8]">RETAE</h1>
-                    <p className="text-[#a6abb8] font-bold line-through">£820</p>
+                    <p className="text-[#a6abb8] font-bold line-through">
+                      £820
+                    </p>
                   </div>
                   <div>
                     <p className="bg-[#3661eb] text-white  text-[14px] px-12 py-2 rounded-t-[5px]">
@@ -100,13 +111,13 @@ export default function FlightSummary() {
               </div>
             </section>
             <div className="text-white max-w-[380px]">
-              <h2 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2">
+              <h2 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2 " id="first-text">
                 Saving types
               </h2>
-              <h3 className="text-[32px] ">
+              <h3 className="text-[32px] " id="first-text">
                 Save big on last-minute trips and business class
               </h3>
-              <p className="text-[#8a8c92] text-[14px]">
+              <p className="text-[#8a8c92] text-[14px]" id="second-text">
                 Typically, our steepest discounts come from last-minutes
                 bookings and one-way business class deals. See how much you can
                 save today.
@@ -115,18 +126,18 @@ export default function FlightSummary() {
           </article>
           <article className="flex items-center justify-between mt-[120px]">
             <div className="text-white max-w-[380px]">
-              <h2 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2">
+              <h2 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2" id="first-text">
                 Business class benefit
               </h2>
-              <h3 className="text-[32px]">You Deserve better than 88B</h3>
-              <p className="text-[#8a8c92] text-[14px]">
+              <h3 className="text-[32px]" id="first-text">You Deserve better than 88B</h3>
+              <p className="text-[#8a8c92] text-[14px] " id="second-text">
                 Crossing youur fingers youll be treated like a real human on
                 your next fight? Basis makes premium air travel more
                 accessible--and affordable--than ever.
               </p>
             </div>
             <section className="flex gap-4">
-              <div className="relative">
+              <div className="relative" id="first-text">
                 <div className="relative w-[340px] h-[450px]">
                   <Image
                     src="/images/dummy-image.jpg"
@@ -144,7 +155,7 @@ export default function FlightSummary() {
                   </p>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative" id="first-text">
                 <div className="relative w-[340px] h-[450px]">
                   <Image
                     src="/images/dummy-image.jpg"
