@@ -135,3 +135,30 @@ export const ctaAnimation = () => {
         }
       );
 }
+
+export const faqAnimation = () => {
+  const tl = gsap.timeline({
+    scrollTrigger:{trigger: ".faq-container", start: "top center"} 
+  })
+  tl.fromTo("#faq-header", {
+    y: 60,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "ease.in",
+  })
+  document.querySelectorAll("#question").forEach((faq, index) => {
+    tl.fromTo(faq, { y: 20,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.1,
+      ease: "ease.in",
+    }) 
+  })
+}

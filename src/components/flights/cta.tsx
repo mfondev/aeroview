@@ -3,10 +3,8 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import ContactForm from "./contactForm";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import { ctaAnimation } from "../ui/animation";
-gsap.registerPlugin(ScrollTrigger);
+
 
 export default function Cta() {
   useEffect(() => {
