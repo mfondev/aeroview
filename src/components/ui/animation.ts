@@ -1,6 +1,6 @@
+import SplitType from "split-type";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 export const flightAnimation = () => {
@@ -101,5 +101,37 @@ export const summaryAnimation = () => {
   
         },
         "-=0.5"
+      );
+}
+
+
+export const ctaAnimation = () => {
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: "#cta-area", start: "top 20%" },
+      });
+      tl.fromTo(
+        "#cta-text",
+        {
+          y: 60,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "ease.in",
+        }
+      );
+      tl.fromTo(
+        ".cta-img",
+        { width: "50px", height: "50px", borderRadius: "5px",opacity: 0 },
+        {
+          width: "420px",
+          height: "360px",
+          borderRadius: "20px",
+          opacity: 1,
+          duration: 0.7,
+          ease: "power.out",
+        }
       );
 }
