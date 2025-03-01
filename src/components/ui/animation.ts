@@ -14,7 +14,6 @@ export const flightAnimation = () => {
     });
     const text = new SplitType(".myText", { types: "lines" });
     const lines = text.lines;
-    console.log(lines);
     tl.set(text.lines, { y: 150, opacity: 0 });
     tl.to(text.lines, {
       y: 0,
