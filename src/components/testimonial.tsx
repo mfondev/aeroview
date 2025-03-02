@@ -1,15 +1,22 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
+import { tstAnimation } from "./ui/animation";
 
 export default function Testimonial() {
+  useEffect(() => {
+    tstAnimation()
+  }, []);
   return (
-    <main className="bg-[#eff0f3] pb-[230px] mt-[100px] p-20 ">
+    <main className="bg-[#eff0f3] pb-[230px] mt-[100px] p-20 tst-container">
       <section className="flex items-center justify-between bg-white my-[200p] pl-10 p-4 container mx-auto  py-5 rounded-[20px] w-[80%]">
-        <div className="space-y-6 max-w-[500px]">
+        <div className="space-y-6 max-w-[500px] " id="tst-text">
           <h5>What Travelers Say</h5>
           <h1 className="text-[28px]  ">
             "Always though Google Flights showed the best deals. Had no idea
-            airlines{" "} <span className="text-[#3a5ee6] font-bold">
+            airlines{" "}
+            <span className="text-[#3a5ee6] font-bold">
               blocked off their cheapest tickets
             </span>{" "}
             with the only rule they can't be sold online."
@@ -19,12 +26,12 @@ export default function Testimonial() {
             <p>Dallas, TX</p>
           </span>
         </div>
-        <div className="relative w-[380px] h-[400px]">
+        <div className="relative w-[380px] h-[400px] overflow-hidden">
           <Image
             src="/images/dummy-image.jpg"
             alt="city"
             fill
-            className="rounded-[10px] object-cover"
+            className="rounded-[10px] object-cover tst-img"
           />
         </div>
       </section>

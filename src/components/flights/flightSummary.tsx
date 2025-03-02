@@ -8,7 +8,7 @@ import { summaryAnimation } from "../ui/animation";
 
 export default function FlightSummary() {
   useEffect(() => {
- summaryAnimation()
+    summaryAnimation();
   }, []);
 
   return (
@@ -111,7 +111,10 @@ export default function FlightSummary() {
               </div>
             </section>
             <div className="text-white max-w-[380px]">
-              <h2 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2 " id="first-text">
+              <h2
+                className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2 "
+                id="first-text"
+              >
                 Saving types
               </h2>
               <h3 className="text-[32px] " id="first-text">
@@ -126,10 +129,15 @@ export default function FlightSummary() {
           </article>
           <article className="flex items-center justify-between mt-[120px]">
             <div className="text-white max-w-[380px]">
-              <h2 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2" id="first-text">
+              <h2
+                className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2"
+                id="first-text"
+              >
                 Business class benefit
               </h2>
-              <h3 className="text-[32px]" id="first-text">You Deserve better than 88B</h3>
+              <h3 className="text-[32px]" id="first-text">
+                You Deserve better than 88B
+              </h3>
               <p className="text-[#8a8c92] text-[14px] " id="second-text">
                 Crossing youur fingers youll be treated like a real human on
                 your next fight? Basis makes premium air travel more

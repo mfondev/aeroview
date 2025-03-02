@@ -49,8 +49,8 @@ export default function MainHeader() {
                   <h6>Expedia</h6>
                   <p>$4,215.00</p>
                 </li>
-                <li className='flex items-center justify-between'>
-                  <h6>Booking.com</h6>
+                <li className='flex items-center justify-between '>
+                  <h6>Booking<span className='text-[#44b9c3] font-bold'>.com</span></h6>
                   <p>$4,215.00</p>
                 </li>
               </ul>
