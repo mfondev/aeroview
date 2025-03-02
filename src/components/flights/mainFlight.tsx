@@ -9,6 +9,10 @@ import FlightsLink from "./flightsLink";
 import { FaPlane } from "react-icons/fa";
 import Image from "next/image";
 import { flightAnimation, modalSlide } from "../ui/animation";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Org from "./org";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function FlightPage() {
   const container = useRef(null);
@@ -21,6 +25,7 @@ export default function FlightPage() {
   return (
     <>
       <FlightHeader />
+      <Org />
       <AvailableFlights />
       <div className="bg-[#3661eb] w-full">
         <div

@@ -18,14 +18,13 @@ export default function AvailableFlights() {
         // markers: true,
       },
     });
-    document.querySelectorAll("#flight-status").forEach(element => {
+    document.querySelectorAll("#flight-status").forEach((element) => {
       timeline.fromTo(
         element,
         { x: -100, opacity: 0 },
         { x: 0, opacity: 1, duration: 1, ease: "expo.in" }
       );
-    })
- 
+    });
   }, []);
 
   const moveFlight = () => {
