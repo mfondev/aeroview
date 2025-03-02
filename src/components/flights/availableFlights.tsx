@@ -10,6 +10,24 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AvailableFlights() {
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#flight-header",
+        start: "top 20%",
+        // markers: true,
+      },
+    });
+    document.querySelectorAll("#flight-status").forEach(element => {
+      timeline.fromTo(
+        element,
+        { x: -100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, ease: "expo.in" }
+      );
+    })
+ 
+  }, []);
+
   const moveFlight = () => {
     const tl = gsap.timeline();
     tl.from(".flight-svg", { x: -45 });
@@ -29,7 +47,10 @@ export default function AvailableFlights() {
   // console.log(data);
 
   return (
-    <main className="grid grid-cols-1 justify-items-center my-8">
+    <main
+      className="grid grid-cols-1 justify-items-center my-8"
+      id="flight-header"
+    >
       <header className="text-center">
         <h2 className="text-3xl">
           <span className="text-[#3661eb] font-bold">Save today</span>. Pack
@@ -39,10 +60,16 @@ export default function AvailableFlights() {
           Acess deals your friends wont stop asking you about.
         </p>
       </header>
-        <div className={`bg-blue hover:border hover:border-[#3661eb] transform transition duration-200 hover:scale-105 mt-8 bg-white shadow-2xl rounded-[20px] border-white`} onMouseEnter={moveFlight}
-        onMouseLeave={resetFlight}>
-        <div className="relative mb-4">
-          <h4 className="text-[9px] px-3 py-1 text-[#3661eb] bg-[#fff] uppercase rounded-r-[5px] absolute top-3 ">
+      <div
+        className={`bg-blue hover:border hover:border-[#3661eb] transform transition duration-200 hover:scale-105 mt-8 bg-white shadow-2xl rounded-[20px] border-white`}
+        onMouseEnter={moveFlight}
+        onMouseLeave={resetFlight}
+      >
+        <div className="relative mb-4 overflow-hidden">
+          <h4
+            className="text-[12px] px-3 py- text-[#446ef7] bg-[#fff] uppercase rounded-r-[5px] absolute top-4 "
+            id="flight-status"
+          >
             Business class
           </h4>
           <Image
@@ -59,7 +86,9 @@ export default function AvailableFlights() {
           </p>
           <div className="flex items-center justify-center relative">
             <FaPlane className="text-[#3661eb] flight-svg z-[30] absolute -top-0 text-[18px]" />
-            <p className="relative z-[10] text-[#e5eaf0d2] font-bold">- - - - - - - - -</p>
+            <p className="relative z-[10] text-[#e5eaf0d2] font-bold">
+              - - - - - - - - -
+            </p>
           </div>
           <p>
             New York <span className="font-bold">(JFK)</span>

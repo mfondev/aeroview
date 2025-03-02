@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import {
   Select,
@@ -34,7 +33,6 @@ export default function NavLinks() {
         scale: 1,
         opacity: 1,
         duration: 1.5,
-        // ease: "elastic.out(1, 0.5)",
         ease: "expo.in",
       }
     );
@@ -83,7 +81,6 @@ export default function NavLinks() {
             href="sign-up"
             className="bg-[#3661eb] text-white py-3 px-6 rounded-[5px]"
             id="nav-text"
-
           >
             Sign Up
           </Link>
@@ -92,7 +89,6 @@ export default function NavLinks() {
         <button
           className="bg-[#3661eb] text-white py-3 px-6 rounded-[5px]"
           id="nav-text"
-
           onClick={() => {
             signOut(auth);
             sessionStorage.removeItem("user");

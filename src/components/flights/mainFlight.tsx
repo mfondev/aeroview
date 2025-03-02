@@ -27,25 +27,18 @@ export default function FlightPage() {
           className=" max-w-[70%] pl-16 py-20 text-white text-left cunt"
           ref={container}
         >
+        
           <h3 className="text-[48px] leading-[55px]  myText">
             Airlines save a number of <br />{" "}
-            <span className="bg-[#95adfc] shadow-sm text-[20px] rounded-full py-2 px-4">
+            <span className="bg-[#abbefd] shadow-sm text-[14px] rounded-full py-0 px-6">
               $7,084
             </span>{" "}
             discounted seats for every <br /> flight{" "}
-            {/*<div><FaPlane className="text-white" /> </div>*/}called
+        
+            called
             "consolidator" fares. <br />
             Now they're yours.{" "}
-            {/*<div className="flex items-center ">
-                    <Image
-                      src="/images/aeroview_logo.svg"
-                      alt="aero view logo"
-                      width={20}
-                      height={20}
-                      className=""
-                    />
-                    <h1>Aeroview</h1>
-                  </div> */}
+           
           </h3>
           <p className="text-[16px] py-4">
             After clicking search we will send your private fares directly to

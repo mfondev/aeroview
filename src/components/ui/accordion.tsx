@@ -35,7 +35,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <GoPlus className="h-6 w-6 shrink-0 text-muted-foreground transition-transform duration-200 text-[#4e74f2] " />
+      <GoPlus className="h-6 w-6 shrink-0 text-muted-foreground transition-transform duration-200 text-[#4f76f7] " />
       {/* <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" /> */}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>

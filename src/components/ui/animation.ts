@@ -14,14 +14,15 @@ export const flightAnimation = () => {
     });
     const text = new SplitType(".myText", { types: "lines" });
     const lines = text.lines;
-    tl.set(text.lines, { y: 150, opacity: 0 });
+    tl.set(text.lines, { y: 50, opacity: 0 });
     tl.to(text.lines, {
       y: 0,
       opacity: 1,
       ease: "expo.out",
-      duration: 1.5,
+      duration: 1,
       stagger: 0.1,
     });
+    // tl.fromTo("",{},{})
   });
 
   return () => ctx.revert();
@@ -31,7 +32,6 @@ export const modalSlide = () => {
   const tl = gsap.timeline({
     scrollTrigger: { trigger: ".main-area", start: "top center" },
   });
-
   tl.to(".head-text1", { y: -35, duration: 1 });
   tl.to(".head-text2", { y: -34, duration: 0.5 });
   tl.fromTo(
