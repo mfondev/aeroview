@@ -28,7 +28,10 @@ export default function FlightHeader() {
   }, []);
   return (
     <>
-      <header className="border-1 border-[#ecedef] container mx-auto py-4" id="hd-text">
+      <header
+        className="border  container mx-auto p-5 bg-white rounded-lg absolute left-1/2 bottom-[-70px] transform -translate-x-1/2"
+        id="hd-text"
+      >
         <SeekFlights />
         <main className="flex items-center justify-betweens border border-[#ecedef] rounded-[5px] ">
           <div

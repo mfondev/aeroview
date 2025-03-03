@@ -24,7 +24,7 @@ export default function FlightPage() {
 
   return (
     <>
-      <FlightHeader />
+      {/* <FlightHeader /> */}
       <Org />
       <AvailableFlights />
       <div className="bg-[#3661eb] w-full">

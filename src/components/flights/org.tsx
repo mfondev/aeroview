@@ -5,7 +5,7 @@ export default function Org() {
   return (
     <>
       <main
-        className="flex items-center gap-20 my-20 w-[95%] relative overflow-hidden whitespace-nowrap mx-auto
+        className="flex items-center gap-20 mt-[140px] mb-20 w-[95%] relative overflow-hidden whitespace-nowrap mx-auto
   before:absolute before:top-0 before:left-0 before:w-[150px] before:h-full before:content-[''] before:z-30
   before:bg-gradient-to-l before:from-transparent before:to-white
   after:absolute after:top-0 after:right-0 after:w-[150px] after:h-full after:content-[''] after:z-30 
