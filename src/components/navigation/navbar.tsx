@@ -13,11 +13,11 @@ import NavLinks from "./navLinks";
 
 export default function Navbar() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
-  const [user] = useAuthState(auth);
-  const router = useRouter();
-  console.log(user);
+  // const [user] = useAuthState(auth);
+  // const router = useRouter();
+  // // console.log(user);
 
-  const userSession = sessionStorage.getItem("user");
+  // const userSession = sessionStorage.getItem("user");
 
   // if (!user && !userSession) {
   //   router.push("/sign-up");
