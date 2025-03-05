@@ -5,7 +5,9 @@ export interface flightType {
     deprt_initial: string,
     arrival: string,
     arrival_initial: string,
-    flight_price: string
+    flight_price: string,
+    initial_price: string,
+    discount: string
 }
 
 export interface faqType {

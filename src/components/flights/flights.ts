@@ -9,6 +9,8 @@ export const flights: flightType[] = [
     arrival: "New York",
     arrival_initial: "JFK",
     flight_price: "$282",
+    initial_price: "$820",
+    discount: "60% OFF",
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ export const flights: flightType[] = [
     arrival: "Paris",
     arrival_initial: "CDG",
     flight_price: "$381",
+    initial_price: "$820",
+    discount: "60% OFF",
   },
   {
     id: 3,
@@ -27,6 +31,8 @@ export const flights: flightType[] = [
     arrival: "Lagos",
     arrival_initial: "LAG",
     flight_price: "$300",
+    initial_price: "$820",
+    discount: "60% OFF",
   },
   {
     id: 4,
@@ -36,6 +42,8 @@ export const flights: flightType[] = [
     arrival: "Istanbul",
     arrival_initial: "IST",
     flight_price: "$234",
+    initial_price: "$820",
+    discount: "60% OFF",
   },
 
   {
@@ -46,6 +54,8 @@ export const flights: flightType[] = [
     arrival: "Munich",
     arrival_initial: "MUN",
     flight_price: "$336",
+    initial_price: "$820",
+    discount: "60% OFF",
   },
   {
     id: 6,
@@ -55,5 +65,7 @@ export const flights: flightType[] = [
     arrival: "Cape Town",
     arrival_initial: "CCT",
     flight_price: "$238",
+    initial_price: "$820",
+    discount: "60% OFF",
   },
 ];
