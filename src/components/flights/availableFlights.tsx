@@ -1,15 +1,19 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect,useRef } from "react";
 import Image from "next/image";
 import { useGetFlights } from "../../../utils/hooks/getFlights";
 import { FaPlane } from "react-icons/fa";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { flights } from "./flights";
+import { flightType } from "../../../utils/types";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AvailableFlights() {
+const flightRef = useRef(null);
+
   useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -27,27 +31,26 @@ export default function AvailableFlights() {
     });
   }, []);
 
-  const moveFlight = () => {
+
+  const moveFlight = (e: React.MouseEvent<HTMLDivElement>) => {
+    const flightSvg = e.currentTarget.querySelector(".flight-svg");
     const tl = gsap.timeline();
-    tl.from(".flight-svg", { x: -45 });
-    tl.to(".flight-svg", { x: 46, duration: 1 });
+
+    tl.from(flightSvg, { x: -45 });
+    tl.to(flightSvg, { x: 46, duration: 1 });
   };
-  const resetFlight = () => {
-    gsap.to(".flight-svg", { x: 0, duration: 1 });
+  const resetFlight = (e: React.MouseEvent<HTMLDivElement>) => {
+    const flightSvg = e.currentTarget.querySelector(".flight-svg");
+
+    gsap.to(flightSvg, { x: 0, duration: 1 });
   };
 
-  //   if (hover) {
-  // gsap.fromTo(".flight-svg",{x:-200},{x:46, duration: 1})
-
-  //   }
-
-  // }, []);
   // const { data, isLoading, isError, error } = useGetFlights();
   // console.log(data);
 
   return (
     <main
-      className="grid grid-cols-1 justify-items-center my-8"
+      className="grid grid-cols-1 justify-items-center my-20"
       id="flight-header"
     >
       <header className="text-center">
@@ -59,59 +62,66 @@ export default function AvailableFlights() {
           Acess deals your friends wont stop asking you about.
         </p>
       </header>
-      <div
-        className={`bg-blue hover:border hover:border-[#3661eb] transform transition duration-200 hover:scale-105 mt-8 bg-white shadow-2xl rounded-[20px] border-white`}
-        onMouseEnter={moveFlight}
-        onMouseLeave={resetFlight}
-      >
-        <div className="relative mb-4 overflow-hidden">
-          <h4
-            className="text-[12px] px-3 py- text-[#446ef7] bg-[#fff] uppercase rounded-r-[5px] absolute top-4 "
-            id="flight-status"
+      <section className="grid grid-cols-3 justify-between gap-x-5 ">
+        {flights.map((flight : flightType) => (
+          <div
+            className={` bg-blue hover:border hover:border-[#3661eb] transform transition duration-200 hover:scale-105 mt-8 bg-white shadow-2xl rounded-[20px] border-white`}
+            onMouseEnter={moveFlight}
+            onMouseLeave={resetFlight}
+            key={flight.id}
+            ref={flightRef}
           >
-            Business class
-          </h4>
-          <Image
-            src="/images/dummy-image.jpg"
-            alt="city"
-            width={350}
-            height={400}
-            className="rounded-t-[20px] "
-          />
-        </div>
-        <div className="flex items-center justify-between text-sm px-4">
-          <p>
-            Jakarta <span className="font-bold">(CGK)</span>
-          </p>
-          <div className="flex items-center justify-center relative">
-            <FaPlane className="text-[#3661eb] flight-svg z-[30] absolute -top-0 text-[18px]" />
-            <p className="relative z-[10] text-[#e5eaf0d2] font-bold">
-              - - - - - - - - -
-            </p>
+            <div className="relative mb-4 overflow-hidden">
+              <h4
+                className="text-[12px] px-3 py- text-[#446ef7] bg-[#fff] uppercase rounded-r-[5px] absolute top-4 "
+                id="flight-status"
+              >
+                Business class
+              </h4>
+              <div className="relative w-[350px] h-[200px] ">
+                <Image
+                  src={flight.image}
+                  alt="city"
+                 fill
+                  className="rounded-t-[20px] object-cover"
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-between gap-1 text-sm px-4">
+              <p>{flight.departure}{" "}
+                 <span className="font-bold">({flight.deprt_initial})</span>
+              </p>
+              <div className="flex items-center justify-center relative">
+                <FaPlane className="text-[#3661eb] flight-svg z-[30] absolute -top-0 text-[18px]" />
+                <p className="relative z-[10] text-[#e5eaf0d2] font-bold">
+                  - - - - - - - - -
+                </p>
+              </div>
+              <p>
+                {flight.arrival}<span className="font-bold">({flight.arrival_initial})</span>
+              </p>
+            </div>
+            <div className="bg-[#e5eaf0d2] flex items-center justify-between text-sm p-2 px-3 mt-4 rounded-lg mx-4 mb-3">
+              <div className="flex items-center ">
+                <Image
+                  src="/images/aeroview_logo.svg"
+                  alt="aero view logo"
+                  width={20}
+                  height={20}
+                  className=""
+                />
+                <h1>Aeroview</h1>
+              </div>
+              <span className="flex items-center gap-2">
+                <p className=" text-[#a6abb8]">from</p>
+                <p className="text-[#3661eb] font-extrabold text-[18px] italic">
+                  {flight.flight_price}
+                </p>
+              </span>
+            </div>
           </div>
-          <p>
-            New York <span className="font-bold">(JFK)</span>
-          </p>
-        </div>
-        <div className="bg-[#e5eaf0d2] flex items-center justify-between text-sm p-2 px-3 mt-4 rounded-lg mx-4 mb-3">
-          <div className="flex items-center ">
-            <Image
-              src="/images/aeroview_logo.svg"
-              alt="aero view logo"
-              width={20}
-              height={20}
-              className=""
-            />
-            <h1>Aeroview</h1>
-          </div>
-          <span className="flex items-center gap-2">
-            <p className=" text-[#a6abb8]">from</p>
-            <p className="text-[#3661eb] font-extrabold text-[18px] italic">
-              $282
-            </p>
-          </span>
-        </div>
-      </div>
+        ))}
+      </section>
     </main>
   );
 }

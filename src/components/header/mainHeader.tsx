@@ -34,7 +34,7 @@ export default function MainHeader() {
         const itemX = rect.left + rect.width / 2;
         const itemY = rect.top + rect.height / 2;
         const distance = Math.hypot(itemX - e.clientX, itemY - e.clientY);
-        console.log(itemX, itemY, distance);
+        // console.log(itemX, itemY, distance);
 
         const maxDistance = 190;
 

@@ -27,13 +27,13 @@ export default function FlightPage() {
       {/* <FlightHeader /> */}
       <Org />
       <AvailableFlights />
-      <div className="bg-[#3661eb] w-full">
+      <div className="bg-[#3661eb] w-full h-[80vh] flex items-center mt-5">
         <div
-          className=" max-w-[70%] pl-16 py-20 text-white text-left cunt"
+          className=" max-w-[70%] pl-16 py20  text-white text-left cunt"
           ref={container}
         >
         
-          <h3 className="text-[48px] leading-[55px]  myText">
+          <h3 className="text-[52px] leading-[55px]  myText">
             Airlines save a number of <br />{" "}
             <span className="bg-[#abbefd] shadow-sm text-[14px] rounded-full py-0 px-6">
               $7,084
@@ -53,7 +53,7 @@ export default function FlightPage() {
       </div>
       <main className="bg-[#dee4eb] main-area">
         <section className="">
-          <article className="container mx-auto py-16">
+          <article className="container mx-auto py-20">
             <div className="flex  items-center justify-center flex-col">
               <div className="flex items-center text-center text-3xl max-w-[450px] mx-auto">
                 <span className="flex flex-col h-[40px] overflow-hidden head-text">

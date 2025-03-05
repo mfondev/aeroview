@@ -9,9 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { FAQs } from "./faqs";
 import { faqAnimation } from "../ui/animation";
-
-
-
+import { faqType } from "../../../utils/types";
 
 export default function Faq() {
   useEffect(() => {
@@ -23,11 +21,11 @@ export default function Faq() {
         <h3 className="text-center text-[32px] font-bold" id="faq-header">
           Frequently Asked Questions
         </h3>
-        {FAQs.map((faqs, index) => (
-          <Accordion type="single" collapsible key={index}>
+        {FAQs.map((faq : faqType) => (
+          <Accordion type="single" collapsible key={faq.id}>
             <AccordionItem value="item-1" id="question">
-              <AccordionTrigger>{faqs.question}</AccordionTrigger>
-              <AccordionContent>{faqs.answers}</AccordionContent>
+              <AccordionTrigger>{faq.question}</AccordionTrigger>
+              <AccordionContent>{faq.answers}</AccordionContent>
             </AccordionItem>
           </Accordion>
         ))}
