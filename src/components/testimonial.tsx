@@ -28,7 +28,7 @@ export default function Testimonial() {
         </div>
         <div className="relative w-[380px] h-[400px] overflow-hidden">
           <Image
-            src="/images/dummy-image.jpg"
+            src="/images/traveler.jpg"
             alt="city"
             fill
             className="rounded-[10px] object-cover tst-img"

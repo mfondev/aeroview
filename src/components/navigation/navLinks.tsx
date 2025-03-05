@@ -22,7 +22,9 @@ gsap.registerPlugin(ScrollTrigger);
 export default function NavLinks() {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  console.log(user);
+  // console.log(user);
+  const userSession = sessionStorage.getItem("user");
+
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -39,7 +41,7 @@ export default function NavLinks() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center gap-[10rem]">
+    <div className="flex justify-between items-center gap-[10rem] z-10">
       <ul className="flex justify-between items-center gap-8">
         <li id="nav-text" className="text-sm font-medium ">
           <Link href="">About</Link>

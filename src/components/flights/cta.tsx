@@ -23,8 +23,8 @@ export default function Cta() {
           </h2>
           <div className="relative w-[420px] h-[360px]">
             <Image
-              src="/images/dummy-image.jpg"
-              alt="city"
+              src="/images/trraveler2.jpg"
+              alt="traveler"
               fill
               className="rounded-[20px object-cover cta-img"
             />
