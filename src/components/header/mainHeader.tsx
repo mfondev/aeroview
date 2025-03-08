@@ -6,25 +6,10 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import FlightHeader from "../flights/flightHeader";
 gsap.registerPlugin(ScrollTrigger);
+import { generateGridItems } from "../ui/gridItems";
+import { mainHeaderText } from "../ui/gridItems";
 
 export default function MainHeader() {
-  const generateGridItems = () => {
-    const gridItems = [];
-    const numRows = window.innerWidth <= 567 ? 20 : 8;
-
-    for (let row = 0; row < numRows; row++) {
-      for (let col = 0; col < 12; col++) {
-        gridItems.push(
-          <div
-            key={`${row}-${col}`}
-            className="grid-item bg-[#dde9f7] shadow-none"
-          ></div>
-        );
-      }
-    }
-
-    return gridItems;
-  };
   useEffect(() => {
     const gridItems = gsap.utils.toArray(".grid-item");
 
@@ -58,26 +43,9 @@ export default function MainHeader() {
         });
       });
     };
+    mainHeaderText();
 
     document.addEventListener("mousemove", handleMouseMove);
-
-    gsap.fromTo(
-      "#fl-text",
-      {
-        y: 60,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "ease.in",
-        delay: 1,
-      }
-    );
-    // return () => {
-    //   document.removeEventListener("mousemove", handleMouseMove);
-    // };
   }, []);
 
   return (

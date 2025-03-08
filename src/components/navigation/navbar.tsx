@@ -24,6 +24,7 @@ export default function Navbar() {
   // }
 
   return (
+    <>
     <nav className="container mx-auto py-[18px] flex justify-between items-center">
       <Link href="/" className="flex items-center gap-2" id="nav-text">
         <Image
@@ -36,7 +37,10 @@ export default function Navbar() {
         <h1 className="font-bold">Aeroview</h1>
       </Link>
       {isDesktop ? (
+       
         <NavLinks />
+
+       
       ) : (
         <div>
           <Drawer>
@@ -48,5 +52,6 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+    </>
   );
 }
