@@ -24,7 +24,7 @@ export default function FlightSummary() {
           <article className="flex items-center justify-betwee gap-20">
             <section className="flex gap-4">
               {newFlights.map((flight: flightType) => (
-                <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white flight-summary">
+                <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white flight-summary" key={flight.id}>
                   <div className="relative mb-2">
                     <div className="relative w-[320px] h-[230px]">
                       <Image
@@ -124,7 +124,7 @@ export default function FlightSummary() {
                 </div>
                 <div className="absolute bottom-0 p-5">
                   <h3 className="text-white font-bold text-[16px]">
-                    Business Class
+                    Economy
                   </h3>
                   <p className="w-fit mt-1 bg-white rounded-full px-2 font-bold text-black text-center text-[10px]">
                     Lufthansa

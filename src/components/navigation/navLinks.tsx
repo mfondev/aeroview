@@ -69,36 +69,6 @@ export default function NavLinks() {
           </Select>
         </li>
       </ul>
-      {!user ? (
-        <div className="flex gap-8">
-          <Link
-            href="login"
-            className="bg-[#3661eb] text-white py-3 px-6 rounded-[5px]"
-            id="nav-text"
-          >
-            Login
-          </Link>
-
-          <Link
-            href="sign-up"
-            className="bg-[#3661eb] text-white py-3 px-6 rounded-[5px]"
-            id="nav-text"
-          >
-            Sign Up
-          </Link>
-        </div>
-      ) : (
-        <button
-          className="bg-[#3661eb] text-white py-3 px-6 rounded-[5px]"
-          id="nav-text"
-          onClick={() => {
-            signOut(auth);
-            sessionStorage.removeItem("user");
-          }}
-        >
-          Logout
-        </button>
-      )}
     </div>
   );
 }

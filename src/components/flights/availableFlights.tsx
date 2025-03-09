@@ -50,7 +50,7 @@ const flightRef = useRef(null);
 
   return (
     <main
-      className="grid grid-cols-1 justify-items-center my-20"
+      className=" flex flex-col items-center justify-center h-screen"
       id="flight-header"
     >
       <header className="text-center">
@@ -62,7 +62,7 @@ const flightRef = useRef(null);
           Acess deals your friends wont stop asking you about.
         </p>
       </header>
-      <section className="grid grid-cols-3 justify-between gap-x-5 ">
+      <section className="grid grid-cols-3 gap-x-4  ">
         {flights.map((flight : flightType) => (
           <div
             className={` bg-blue hover:border hover:border-[#3661eb] transform transition duration-200 hover:scale-105 mt-8 bg-white shadow-2xl rounded-[20px] border-white`}
@@ -73,7 +73,7 @@ const flightRef = useRef(null);
           >
             <div className="relative mb-4 overflow-hidden">
               <h4
-                className="text-[12px] px-3 py- text-[#446ef7] bg-[#fff] uppercase rounded-r-[5px] absolute top-4 "
+                className="text-[12px] px-3 py- text-[#446ef7] bg-[#fff] uppercase rounded-r-[5px] absolute top-4 z-30"
                 id="flight-status"
               >
                 Business class

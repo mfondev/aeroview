@@ -8,6 +8,8 @@ import FlightHeader from "../flights/flightHeader";
 gsap.registerPlugin(ScrollTrigger);
 import { generateGridItems } from "../ui/gridItems";
 import { mainHeaderText } from "../ui/gridItems";
+import Org from "../flights/org";
+import AnimatedList from "./animatedList";
 
 export default function MainHeader() {
   useEffect(() => {
@@ -49,6 +51,7 @@ export default function MainHeader() {
   }, []);
 
   return (
+    <div className="h-screen">
     <main className="bg-[#dde9f7 relative h-[65vh]">
       <div className="grid-container h-full w-full absolute border border-red border-1">
         {generateGridItems()}
@@ -79,7 +82,7 @@ export default function MainHeader() {
                   Seoul <span className="font-bold">(ICN)</span>
                 </h3>
               </header>
-              <div>
+              {/* <div>
                 <ul className="flex flex-col gap-1">
                   <li className="flex items-center justify-between">
                     <h6 className="text-sm">United</h6>
@@ -105,7 +108,8 @@ export default function MainHeader() {
                     <p className="text-sm">$4,215.00</p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
+              <AnimatedList />
             </div>
             <div className="flex justify-center items-center w-full">
               <div className="flex items-center justify-center mt-4 gap-4 bg-[#ffffff] rounded-3xl p-2 w-fit text-center">
@@ -118,9 +122,12 @@ export default function MainHeader() {
           </section>
         </section>
       </main>
-      {/* <div className="cursor fixed w-6 h-6 bg-blue-500 rounded-full pointer-events-none"></div> */}
-
+     
       <FlightHeader />
     </main>
+    <Org/>
+
+    </div>
+
   );
 }

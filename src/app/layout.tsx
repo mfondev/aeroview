@@ -42,7 +42,7 @@ export default function RootLayout({
           href="/images/aeroview_logo.svg"
         />
       </head>
-      <body className={poppins.className}>
+      <body className={`${poppins.className} `} >
         <LenisProvider>
           <Provider>
             {children}

@@ -16,8 +16,8 @@ export default function Faq() {
     faqAnimation();
   }, []);
   return (
-    <>
-      <div className="container mx-auto mt-[400px] faq-container">
+    <section className="flx items-center justify-center ">
+      <div className="container mx-auto mt-[400px] faq-container h-screen">
         <h3 className="text-center text-[32px] font-bold" id="faq-header">
           Frequently Asked Questions
         </h3>
@@ -45,6 +45,6 @@ export default function Faq() {
           </button>
         )}
       </div>
-    </>
+    </section>
   );
 }

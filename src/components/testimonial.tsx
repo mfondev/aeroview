@@ -9,7 +9,7 @@ export default function Testimonial() {
     tstAnimation()
   }, []);
   return (
-    <main className="bg-[#eff0f3] pb-[230px] mt-[100px] p-20 tst-container">
+    <main className="bg-[#eff0f3] pb-[230px] p-20 tst-container h-screen">
       <section className="flex items-center justify-between bg-white my-[200p] pl-10 p-4 container mx-auto  py-5 rounded-[20px] w-[80%]">
         <div className="space-y-6 max-w-[500px] " id="tst-text">
           <h5>What Travelers Say</h5>

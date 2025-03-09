@@ -19,9 +19,7 @@ export const generateGridItems = () => {
 
 const gridItems = gsap.utils.toArray(".grid-item");
 
-
 export const mainHeaderText = () => {
-
   gsap.fromTo(
     "#fl-text",
     {
