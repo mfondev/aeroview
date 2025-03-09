@@ -38,7 +38,10 @@ export default function Cta() {
             Dont waste any time. Let our friendly, expert team of agents find
             the best options for your route.
           </p>
+          <div id="cta-text">
           <ContactForm />
+
+          </div>
         </div>
       </section>
     </>

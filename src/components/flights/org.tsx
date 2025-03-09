@@ -21,7 +21,7 @@ export default function Org() {
                 className="object-cover "
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-2xl">Lufthansa</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-2xl">Lufthansa</h3>
           </div>
        
           <div className="flex  items-center gap-[2px]">
@@ -33,10 +33,10 @@ export default function Org() {
                 className="object-cover "
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-lg">Emirates</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-lg">Emirates</h3>
           </div>
           <div className="flex  items-center gap-[2px]">
-            <h3 className="text-[#bac7d4] font-bold text-lg">
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-lg">
               American Airlines
             </h3>
             <div className="relative w-[40px] h-[40px]">
@@ -57,7 +57,7 @@ export default function Org() {
                 className="object-cover"
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-xl">Air France</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-xl">Air France</h3>
           </div>
           <div className="flex  items-center gap-[2px]">
             <div className="relative w-[40px] h-[40px]">
@@ -68,7 +68,7 @@ export default function Org() {
                 className="object-cover"
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-xl">Ryanair</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-xl">Ryanair</h3>
           </div>
         </section>
         <section className="flex items-center gap-20 animate-slide">
@@ -81,7 +81,7 @@ export default function Org() {
                 className="object-cover "
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-2xl">Lufthansa</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-2xl">Lufthansa</h3>
           </div>
        
           <div className="flex  items-center gap-[2px]">
@@ -93,10 +93,10 @@ export default function Org() {
                 className="object-cover "
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-lg">Emirates</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-lg">Emirates</h3>
           </div>
           <div className="flex  items-center gap-[2px]">
-            <h3 className="text-[#bac7d4] font-bold text-lg">
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-lg">
               American Airlines
             </h3>
             <div className="relative w-[40px] h-[40px]">
@@ -117,7 +117,7 @@ export default function Org() {
                 className="object-cover"
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-xl">Air France</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-xl">Air France</h3>
           </div>
           <div className="flex  items-center gap-[2px]">
             <div className="relative w-[40px] h-[40px]">
@@ -128,7 +128,7 @@ export default function Org() {
                 className="object-cover"
               />
             </div>
-            <h3 className="text-[#bac7d4] font-bold text-xl">Ryanair</h3>
+            <h3 className="text-[#bac7d4] font-bold text-sm md:text-xl">Ryanair</h3>
           </div>
         </section>
       </main>
