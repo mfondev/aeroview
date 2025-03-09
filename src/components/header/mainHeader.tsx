@@ -71,14 +71,14 @@ export default function MainHeader() {
           </div>
           <section id="fl-text">
             <div className="bg-[#ffffff] p-4 rounded-[5px]">
-              <h4 className="text-[10px] text-[#a0b5f4] bg-[#e9f0fa] mb-2 uppercase">
+              <h4 className="text-[10px] text-[#a0b5f4] bg-[#e9f0fa] mb-2 uppercase p-1 font-bold">
                 Business class
               </h4>
               <header className="flex items-center justify-between gap-[110px] mb-4">
-                <h3 className="text-sm ">
+                <h3 className="text-[12px] font-bold">
                   Denpasar <span className="font-bold">(DPS)</span>
                 </h3>
-                <h3 className="text-sm ">
+                <h3 className="text-[12px] font-bold">
                   Seoul <span className="font-bold">(ICN)</span>
                 </h3>
               </header>

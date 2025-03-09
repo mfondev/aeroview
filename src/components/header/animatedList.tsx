@@ -3,49 +3,67 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function AnimatedList() {
-  const listItems = useRef<(HTMLLIElement | null)[]>([]);
+  const listItems = useRef<HTMLLIElement[]>([]);
 
   useEffect(() => {
-    listItems.current.forEach((li) => {
-      gsap.to(li, {
-        scale: 1.1, 
+    const animateRandomItem = () => {
+      if (listItems.current.length === 0) return;
+
+      const randomIndex = Math.floor(Math.random() * listItems.current.length);
+      const selectedItem = listItems.current[randomIndex];
+
+      gsap.to(selectedItem, {
+        scale: 1.2,
         backgroundColor: "#e8f0fb",
-        duration: 0.8,
         borderRadius: "5px",
-        x: 10, 
-        "--line-width": "100%", 
-        color: "#2563eb", 
-        repeat: -1, 
-        yoyo: true, 
-        delay: Math.random() * 2, 
+        x: 10,
+        duration: 0.8,
+        paddingTop: 5,
+        paddingBottom: 5,
+        border: "1px solid #fff",
+        onStart: () => {
+          const priceText = selectedItem.querySelector("p");
+          if (priceText) gsap.to(priceText, { color: "#2563eb", duration: 0.4 });
+        },
+        onComplete: () => {
+          gsap.to(selectedItem, {
+            scale: 1,
+            backgroundColor: "transparent",
+            duration: 0.6,
+            paddingTop: 0,
+            paddingBottom: 0,
+            onStart: () => {
+              const priceText = selectedItem.querySelector("p");
+              if (priceText) gsap.to(priceText, { color: "#374151", duration: 0.4 }); 
+            },
+            onComplete: animateRandomItem, 
+          });
+        },
       });
-    });
+    };
+
+    animateRandomItem();
   }, []);
+
+  const prices = ["$4,215.00", "$3,890.00", "$5,120.00", "$4,730.00", "$3,600.00"];
 
   return (
     <div>
       <ul className="flex flex-col gap-2">
-        {["United", "Katak", "Basis", "Expedia", "Booking.com"].map((item, index) => (
-          <li
-            key={index}
-            ref={(el) => (listItems.current[index] = el)}
-            className="flex items-center justify-between px-3 py- relative border-b-2 border-gray-300"
-            style={{
-              "--line-width": "50%",
-              transition: "all 0.4s ease",
-            } as React.CSSProperties}
-          >
-            <h6 className="text-sm">{item}</h6>
-            <p className="text-sm text-gray-700">$4,215.00</p>
-            <span
-              className="absolute bottom-0 left-0 h-[2px] bg-blue-500"
-              style={{
-                width: "var(--line-width)",
-                transition: "width 0.4s ease",
+        {["United", "Katak", "Aeroview", "Expedia", "Booking.com"].map(
+          (item, index) => (
+            <li
+              key={index}
+              ref={(el) => {
+                if (el) listItems.current[index] = el;
               }}
-            ></span>
-          </li>
-        ))}
+              className="flex items-center justify-between px-3 py- relative "
+            >
+              <h6 className="text-[11px] font-bold">{item}</h6>
+              <p className="text-[11px] font-bold text-gray-700">{prices[index]}</p>
+            </li>
+          )
+        )}
       </ul>
     </div>
   );
