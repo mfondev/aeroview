@@ -33,51 +33,51 @@ export default function FlightHeader() {
         id="hd-text"
       >
         <SeekFlights />
-        <main className="flex items-center justify-betweens border border-[#ecedef] rounded-[5px] ">
+        <main className="flex md:flex-row flex-col items-center justify-betweens border border-[#ecedef] rounded-[5px]  ">
           <div
-            className="border-r-[1px] border-[#ecedef] pr-20 pl-2 flex items-center gap-3 p-2
+            className="border-r-[1px] border-[#ecedef] md:pr-20 pl-2 flex items-center gap-3 p-2
           "
           >
             <TbPlaneDeparture className="text-black" />
             <div>
-              <p className="text-[#a6abb8]">From</p>
-              <h5>
+              <p className="text-[12px] md:text-[16px] text-[#a6abb8]">From</p>
+              <h5 className="text-[12px] ">
                 Jakarta
-                <span className="text-[#a6abb8]">CGK</span>
+                <span className="text-[12px] md:text-[16px] text-[#a6abb8]">CGK</span>
               </h5>
             </div>
           </div>
           <div
-            className="border-r-[1px] border-[#ecedef] pr-20 pl-2 flex items-center gap-3
+            className="border-r-[1px] border-[#ecedef] md:pr-20 pl-2 flex items-center gap-3
           "
           >
             <TbPlaneArrival className="text-black" />
             <div>
-              <p className="text-[#a6abb8]">To</p>
-              <h5>
+              <p className="text-[12px] md:text-[16px] text-[#a6abb8]">To</p>
+              <h5 className="text-[12px] ">
                 Singapore
-                <span className="text-[#a6abb8]">SIN</span>
+                <span className="text-[12px] md:text-[16px] text-[#282c35]">SIN</span>
               </h5>
             </div>
           </div>
           <div
-            className="border-r-[1px] border-[#ecedef] pr-20 pl-2 flex items-center gap-3
+            className="border-r-[1px] border-[#ecedef] md:pr-20 pl-2 flex items-center gap-3
           "
           >
             <IoCalendarNumberOutline className="text-black" />
             <div>
-              <p className="text-[#a6abb8]">Departure Date</p>
-              <h5>31/4/2024</h5>
+              <p className="text-[12px] md:text-[16px] text-[#a6abb8]">Departure Date</p>
+              <h5 className="text-[12px] ">31/4/2024</h5>
             </div>
           </div>
           <div
-            className="border-r-[1px] border-[#ecedef] pr-20 pl-2 flex items-center gap-3
+            className="border-r-[1px] border-[#ecedef] md:pr-20 pl-2 flex items-center gap-3
           "
           >
             <IoCalendarNumberOutline className="text-black" />
             <div>
-              <p className="text-[#a6abb8]">Return Date</p>
-              <h5>3/17/2024</h5>
+              <p className="text-[12px] md:text-[16px] text-[#a6abb8]">Return Date</p>
+              <h5 className="text-[12px] ">3/17/2024</h5>
             </div>
           </div>
           <button className="bg-[#3661eb] text-white py-2 px-4 rounded-[5px] ml-10">

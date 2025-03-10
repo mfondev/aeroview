@@ -52,19 +52,19 @@ export default function MainHeader() {
 
   return (
     <div className="h-screen">
-    <main className="bg-[#dde9f7 relative h-[65vh]">
+    <main className="bg-[#dde9f7 relative h-[80vh] md:h-[65vh]">
       <div className="grid-container h-full w-full absolute border border-red border-1">
         {generateGridItems()}
       </div>
       <Navbar />
       <main className="flex items-center justify-center">
-        <section className="container flex items-center justify-between mx-auto px-[40px] py-8 z-10">
+        <section className="container flex flex-col md:flex-row items-center justify-between mx-auto px-[40px] py-8 z-10 ">
           <div id="fl-text">
-            <h2 className="text-4xl max-w-[600px] font-bold">
+            <h2 className="text-2xl md:text-4xl w-full text-center md:text-left md:max-w-[600px] font-bold">
               Save up to 64% on international Business & First Class.{" "}
               <span className="italic">Instantly</span>.
             </h2>
-            <p className="text-[#929daf] mt-4">
+            <p className="text-[#929daf] mt-4 text-sm text-center md:text-left md:text-lg mb-5">
               Unlock exclusive access to private fares airlines dont want you to
               see. Using Basis
             </p>

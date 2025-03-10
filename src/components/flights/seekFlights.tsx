@@ -43,7 +43,7 @@ export default function SeekFlights() {
             <SelectTrigger className='w-[150px]'>
               <SelectValue
                 defaultValue='Business'
-                placeholder='Business & First'
+                placeholder='Business'
               />
             </SelectTrigger>
             <SelectContent>

@@ -36,12 +36,12 @@ export default function FlightSummary() {
                     </div>
                   </div>
                   <div className="fle items-center justify-between text-sm">
-                    <h4 className="text-[12px] px-3 text-[#3661eb] bg-[#fff] uppercase rounded-r-[5px]">
+                    <h4 className="text-[11px] font-bold px-3 text-[#3661eb] bg-[#fff] uppercase rounded-r-[5px]">
                       Business class
                     </h4>
                     <div className="flex items-center justify-between text-sm px-3 pt-1">
                       <p>
-                        {flight.departure}
+                        {flight.departure}{" "}
                         <span className="font-bold">
                           ({flight.deprt_initial})
                         </span>
