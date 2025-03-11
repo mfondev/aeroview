@@ -9,7 +9,7 @@ export const flightAnimation = () => {
       scrollTrigger: {
         trigger: ".cunt",
         start: "top 90%",
-        //   markers: true,
+        markers: true,
       },
     });
     const text = new SplitType(".myText", { types: "lines" });
