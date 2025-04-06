@@ -17,27 +17,27 @@ export default function FlightPage() {
 
   return (
     <>
-      <main className="bg-[#dee4eb] flex items-center justify-center main-area h-screen">
+      <main className="bg-[#dee4eb] flex items-center justify-center main-area md:h-screen">
         <section className="">
           <article className="container mx-auto py-10">
-            <div className="flex  items-center justify-center flex-col">
-              <div className="flex items-center text-center text-3xl max-w-[450px] mx-auto">
+            <div className="flex items-center justify-center flex-col">
+              <div className="flex items-center text-center text-2xl md:text-3xl max-w-[450px] mx-auto">
                 <span className="flex flex-col h-[40px] overflow-hidden head-text">
-                  <span className="text-[#a7a7a7] text-[26px] font-bold head-text1">
+                  <span className="text-[#a7a7a7] text-[22px] md:text-[26px] font-bold head-text1">
                     So easy
                   </span>
-                  <span className="text-[#4360ba] text-[26px] font-bold head-text2">
+                  <span className="mt-1 md:mt-0 text-[#4360ba] text-[22px] md:text-[26px] font-bold head-text2">
                     So easy
                   </span>
                 </span>
                 , Grandma could do it{" "}
               </div>
-              <div className="flex items-center text-center text-3xl max-w-[450px] mx-auto">
+              <div className="flex items-center text-center text-2xl md:text-3xl max-w-[450px] mx-auto">
                 <span className="flex flex-col h-[40px] overflow-hidden head-text">
-                  <span className="text-[#a7a7a7] text-[26px] font-bold head-text1">
+                  <span className="text-[#a7a7a7] text-[22px] md:text-[26px] font-bold head-text1">
                     Save thousands.
                   </span>
-                  <span className="text-[#4360ba] text-[26px] font-bold head-text2">
+                  <span className="mt-1 md:mt-0 text-[#4360ba] text-[22px] md:text-[26px] font-bold head-text2">
                     Save thousands.
                   </span>
                 </span>
@@ -50,7 +50,7 @@ export default function FlightPage() {
                 Discounted, "insider" fares. At your fingertips.
               </p>
             </div>
-            <main className="py-8 flex flex-row  justify-center  gap-2">
+            <main className="py-8 flex items-center md:items-stretch flex-col md:flex-row  md:justify-center gap-6 md:gap-2">
               <SearchFlights />
               <Contact />
               <FlightsLink />

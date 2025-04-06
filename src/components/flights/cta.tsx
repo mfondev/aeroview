@@ -14,17 +14,17 @@ export default function Cta() {
   return (
     <>
       <section
-        className=" relative w-[70%] bg-[#dde9f7] flex gap-10 p-10 container mx-auto rounded-[20px] justify-between overflow-hidden"
+        className="relative w-[90%] md:w-[70%] bg-[#dde9f7] flex flex-col md:flex-row gap-5 md:gap-10 p-5 md:p-10 container mx-auto rounded-[20px] justify-between overflow-hidden"
         id="cta-area"
       >
         <div className="grid-container h-full w-full absolute border border-red border-1 inset-0 ">
           {generateGridItems()}
         </div>
-        <div className="max-w-[450px] flex flex-col justify-between">
-          <h2 className="text-[32px]  mb-8" id="cta-text">
+        <div className=" md:max-w-[450px] flex flex-col justify-between">
+          <h2 className="text-2xl md:text-[32px]  mb-8" id="cta-text">
             Sit back. Let our team do all the work.
           </h2>
-          <div className="relative w-[420px] h-[360px]">
+          <div className="relative w-full md:w-[420px] h-[260px h-[360px]">
             <Image
               src="/images/trraveler2.jpg"
               alt="traveler"

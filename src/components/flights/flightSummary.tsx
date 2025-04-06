@@ -21,8 +21,8 @@ export default function FlightSummary() {
     <>
       <section className="bg-[#081029] relative w-full summary-area">
         <main className="py-10 pb-[400px] container mx-auto">
-          <article className="flex items-center justify-betwee gap-20">
-            <section className="flex gap-4">
+          <article className="flex flex-col md:flex-row items-center justify-betwee gap-20">
+            <section className="flex flex-col md:flex-row gap-4">
               {newFlights.map((flight: flightType) => (
                 <div className=" mt-8 bg-white shadow-2xl rounded-[15px] border-white flight-summary" key={flight.id}>
                   <div className="relative mb-2">
@@ -78,14 +78,14 @@ export default function FlightSummary() {
                 </div>
               ))}
             </section>
-            <div className="text-white max-w-[380px]">
+            <div className="text-white w-[80%] md:max-w-[380px]">
               <h2
                 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2 "
                 id="first-text"
               >
                 Saving types
               </h2>
-              <h3 className="text-[32px] " id="first-text">
+              <h3 className="text-2xl md:text-[32px] " id="first-text">
                 Save big on last-minute trips and business class
               </h3>
               <p className="text-[#8a8c92] text-[14px]" id="second-text">
@@ -95,15 +95,15 @@ export default function FlightSummary() {
               </p>
             </div>
           </article>
-          <article className="flex items-center justify-between mt-[120px]">
-            <div className="text-white max-w-[380px]">
+          <article className="flex flex-col md:flex-row items-center justify-between mt-[120px] gap-8 md:gap-0">
+            <div className="text-white w-[80%] md:max-w-[380px]">
               <h2
                 className="bg-[#192452] text-[9px] text-[#7281cc] px-2 py-1 rounded-full w-fit uppercase text-sm my-2"
                 id="first-text"
               >
                 Business class benefit
               </h2>
-              <h3 className="text-[32px]" id="first-text">
+              <h3 className="text-2xl md:text-[32px]" id="first-text">
                 You Deserve better than 88B
               </h3>
               <p className="text-[#8a8c92] text-[14px] " id="second-text">
@@ -112,7 +112,7 @@ export default function FlightSummary() {
                 accessible--and affordable--than ever.
               </p>
             </div>
-            <section className="flex gap-4">
+            <section className="flex flex-col md:flex-row gap-4">
               <div className="relative" id="first-text">
                 <div className="relative w-[340px] h-[450px]">
                   <Image

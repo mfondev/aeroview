@@ -5,7 +5,7 @@ import ContactForm from "./contactForm";
 export default function FlightsLink() {
   return (
     <>
-      <article className="p-5 w-1/4 flex flex-col gap-14 bg-white rounded-[20px] area-section">
+      <article className="p-5 w-[70%] md:w-1/4 flex flex-col gap-14 bg-white rounded-[20px] area-section">
         <div>
           <div className="p-3 bg-[#eff4f8] rounded-[8px] mb-4 w-fit">
             <LuLink className="text-[#3661eb]" />
