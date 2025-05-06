@@ -17,8 +17,8 @@ export default function Faq() {
   }, []);
   return (
     <section className="flx items-center justify-center ">
-      <div className="container mx-auto mt-[400px] faq-container h-screen">
-        <h3 className="text-center text-[32px] font-bold" id="faq-header">
+      <div className="container mx-auto mt-[400px] faq-container md:h-screen p-5 md:p-0">
+        <h3 className="text-center text-2xl md:text-[32px] font-bold" id="faq-header">
           Frequently Asked Questions
         </h3>
         {FAQs.map((faq : faqType) => (
